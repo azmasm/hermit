@@ -26,7 +26,7 @@ switch2mac is a fork of [nxnative](https://github.com/seedds/nxnative), carried 
 
 ## What you need
 
-- A Mac with Apple silicon (tested: M1 Max, 64 GB, macOS 26). The game uses about 13-16 GB of memory.
+- A Mac with Apple silicon (tested: M1 Max, 64 GB, macOS 26). The game uses about 13-16 GB of memory. The built app requires macOS 26.6 or later; on an older macOS 26.x, see [Building for an older macOS 26.x](#building-for-an-older-macos-26x).
 - **Xcode** with the Metal toolchain (Xcode → Settings → Components), and its command line tools.
 - **.NET 10 SDK** ([dot.net](https://dot.net)): the shader translator runs on it.
 - **Python 3.12 or newer** (python.org or Homebrew).
@@ -63,6 +63,20 @@ cd switch2mac
 4. **Host** (the native runtime) and **app**.
 
 `install` moves the app to `/Applications`, replacing an older one.
+
+### Building for an older macOS 26.x
+
+The app carries a minimum macOS taken from `nxnative/dm/mac/min_os.mk` (`MACOS_MIN`, 26.6 by default). It is compiled into the host as `LC_BUILD_VERSION minos` and copied from there into the app's `Info.plist` as `LSMinimumSystemVersion`, so a build made with the default is refused at launch on an older macOS 26.x: "You can't use this version of the application … with this version of macOS".
+
+Override it for that build instead of editing the file:
+
+```bash
+MACOS_MIN=26.5 ./switch2mac.py build "/path/to/your/dump"
+```
+
+`switch2mac.py` passes its environment to the tools it runs, so `refresh` takes the same prefix, and `make -C nxnative/dm/host GAME=<title ID> dmhost MACOS_MIN=26.5` works on its own. Check the result before installing: `otool -l nxnative/dm/host/dmhost | grep -A4 LC_BUILD_VERSION` and `plutil -p "work/Mario Kart World.app/Contents/Info.plist" | grep LSMinimumSystemVersion` must both show the value chosen.
+
+This override was verified on macOS 26.5.1 only. The host and the launcher also compile at 26.0 with no availability warnings (Metal 4, which the host uses, is `macos(26.0)`), but no build has been launched on a macOS older than 26.5: treat a lower value as untested.
 
 ### The first start waits
 
