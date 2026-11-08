@@ -5,3 +5,4 @@ MacBook Pro	M5		27.2	pokopia-native			Screen mostly black on the first runs: sha
 MacBook Air	M3	8		pokopia-native			All shaders black at first: the same first-run shaders; 8 GB may also be short of memory (closed)	xFractals/pokopia-native#8
 MacBook Air	M3	16		pokopia-native	30		3440x1440, "runs well"	Reddit, pokopia-native release thread
 MacBook Pro	M4 Max	64		nxnative 13da1c52			A full build of all 131,426 shaders took about 6.5 hours; nxnative has since sped its shader builder up (about half the CPU)	seedds/nxnative#1036
+Mac	M4 Pro	24	27.2	pokopia-native 035bd9c2	55	5.8	Played 4 min on 8 Nov 2026. GPU 5.8 ms a frame. Game: Pokemon Pokopia (0400A3A01EE4C000). Measured by the switch2mac app's Performance tab.	switch2mac#32	2026-11-08
