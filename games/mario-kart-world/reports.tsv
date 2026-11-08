@@ -12,3 +12,4 @@ MacBook Pro	M5 Pro	24	27.2	nxnative ae031161			Scenery outside the track flicker
 Mac mini	M6	16		nxnative			GPU out-of-memory crash in play; gone on a later nxnative build, played a long while	seedds/nxnative#1193
 MacBook Pro	M1 Max	64	26.6	nxnative 84dea698	20-60	9.6	45-60 fps for the first two minutes, then 20-25 (frame time 38-46 ms, the game paces at 30)	maintainer test (app build)
 Mac	M4 Pro	24	27.2	nxnative b1c5e4e5	60	10.3	Played 6 min on 8 Nov 2026. GPU 6.8 ms a frame. Game: Mario Kart World (0400C3F00006E000). Measured by the switch2mac app's Performance tab.	switch2mac#31	2026-11-08
+Mac	M1 Max	32	27.2	switch2mac 95eefde5	46	14.4	Played 12 min on 8. Nov. 2026. GPU 18.0 ms a frame. Game: Mario Kart World (0400C3F00006E000). Measured by the switch2mac app's Performance tab.	switch2mac#43	2026-11-08
