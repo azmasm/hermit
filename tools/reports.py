@@ -33,6 +33,26 @@ def fields(body):   # an issue form's answers: "### Label" headings, each follow
     return out
 
 
+def which_build(g, label, version, commit):   # the game's build a report is about: its own id or name in the Build answer (kid-with-sword, mkw-neo, ...), then the
+    # version's commit as a build pins it (the overlay's Engine line says "nxnative <commit>" for every build made on nxnative), then its project in the version
+    # (kid-with-sword-remake), then the general words; None when nothing says
+    bs = S2M.builds(g)
+    generic = set(BUILD_LABELS) | set(BUILD_LABELS.values())
+    for b in sorted(bs, key=lambda b: -len(b['id'])):
+        if b['id'] not in generic and (b['id'] in label or (b.get('name') or '').lower() in (label,)): return b['id']
+    if commit:
+        hit = [b['id'] for b in bs if b['engine'].get('commit', '').startswith(commit[:8])]
+        if len(hit) == 1: return hit[0]
+    for b in bs:
+        repo = b['engine'].get('repo', '').rstrip('/').rsplit('/', 1)[-1].lower()
+        if repo and repo not in generic and repo in version: return b['id']
+    if 'untested' in label: return 'untested'
+    ids = {b['id'] for b in bs}
+    for k, v in BUILD_LABELS.items():
+        if k in label: return v if v in ids or v == 'untested' else (k if k in ids else v)
+    return None
+
+
 def from_issue(issue):
     f = fields(issue.get('body')); n = issue['number']
     game_name = plain(f.get('Game'), 80)
@@ -45,11 +65,11 @@ def from_issue(issue):
     chip_name = f'M{chip[1]}' + (f' {chip[2].capitalize()}' if chip[2] else '')
     model = plain(mac_text[:chip.start()].replace(',', ' '), 30) or 'Mac'
     label = plain(f.get('Build'), 60).lower()
-    bid = 'untested' if 'untested' in label else next((v for k, v in BUILD_LABELS.items() if k in label), None)
-    if not bid: bid = S2M.recommend(g, {'generation': int(chip[1]), 'memory_gb': int(mem[1])})[0]
-    pin = next((b['engine']['commit'] for b in S2M.builds(g) if b['id'] == bid), '')
     version = plain(f.get('Build version (optional)'), 40)
     m = re.search(r'\b([0-9a-f]{7,12})\b', version)
+    bid = which_build(g, label, version.lower(), m[1] if m else '')
+    if not bid: bid = S2M.recommend(g, {'generation': int(chip[1]), 'memory_gb': int(mem[1])})[0]
+    pin = next((b['engine']['commit'] for b in S2M.builds(g) if b['id'] == bid), '')
     build = f'{bid} {m[1][:8]}' if m else (f'{bid} {pin[:8]}' if pin else bid)
     macos = re.search(r'\d+(?:\.\d+){0,2}', plain(f.get('macOS version'), 20))
     used = re.search(r'\d+(?:\.\d+)?', plain(f.get('Memory used (optional)'), 20))
