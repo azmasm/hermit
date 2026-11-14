@@ -1,12 +1,12 @@
 # Resident Evil 4
 
-Title ID `0400569027BF4000`, update v131072. Added automatically when [nxnative](https://github.com/seedds/nxnative) added its profile: see [nxnative's notes on it](https://github.com/seedds/nxnative/tree/ad8bca6c1c9a17ea2f9c59739f8537a999888d63/dm/games/0400569027BF4000) for how far it plays and on which Mac.
+Title ID `0400569027BF4000`, update v131072. Added automatically when [nxnative](https://github.com/seedds/nxnative) added its profile: see [nxnative's notes on it](https://github.com/seedds/nxnative/tree/5a4e23a2e952dae92e1ccf0e6b7bf24e3266d4e8/dm/games/0400569027BF4000) for how far it plays and on which Mac.
 
 Built with nxnative's own builder at the commit `game.json` names (fetched once into `./engines`), with Hermit's front end added (`tools/engine/patch.py`): the game starts at once, **key 1** is the performance overlay and **key 2** the settings.
 
 | What | |
 |---|---|
-| Profile and notes | [nxnative `dm/games/0400569027BF4000`](https://github.com/seedds/nxnative/tree/ad8bca6c1c9a17ea2f9c59739f8537a999888d63/dm/games/0400569027BF4000) |
+| Profile and notes | [nxnative `dm/games/0400569027BF4000`](https://github.com/seedds/nxnative/tree/5a4e23a2e952dae92e1ccf0e6b7bf24e3266d4e8/dm/games/0400569027BF4000) |
 | Dump folder | `base/` and `updates/131072/` |
 
 ## Shared shader list
