@@ -10,7 +10,7 @@
    "engine": {
     "kind": "macnativegames",
     "repo": "https://github.com/ly05010419/MacNativeGames",
-    "commit": "94f107e58498cfa608fdbf829f6b7cf8b1def01b",
+    "commit": "5abd0fa5b4cb39b8c9ac51395948be3bc22f720e",
     "builder": {
      "script": "games/kirby/scripts/build_kirby.py",
      "args": [
