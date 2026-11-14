@@ -57,7 +57,11 @@ def from_issue(issue):
     f = fields(issue.get('body')); n = issue['number']
     game_name = plain(f.get('Game'), 80)
     g = next((g for g in S2M.GAMES.values() if fold(g['name']) == fold(game_name)), None)
-    if not g: return {'ok': False, 'problem': f'"{game_name or "no game"}" is not a game this repository has a page for yet, so a maintainer adds it by hand.'}
+    tid = re.search(r'\(([0-9A-Fa-f]{16})\)', issue.get('body') or '')   # the app's measured line names the game's title ID
+    if not g and tid and tid[1].upper() in S2M.GAMES: g = S2M.GAMES[tid[1].upper()]
+    unlisted = not g and tid and tid[1][:2] in ('01', '04')   # a game with no page (no profile anywhere): its row goes in games/unlisted/reports.tsv
+    if unlisted: g = dict(S2M.unknown_game(tid[1].upper()), name=game_name or tid[1].upper())
+    if not g: return {'ok': False, 'problem': f'"{game_name or "no game"}" is not a game this repository has a page for yet, and the form does not give its title ID, so a maintainer adds it by hand.'}
     mac_text = plain(f.get('Mac'), 80)
     chip = re.search(r'\bM(\d{1,2})(?:\s*(Pro|Max|Ultra))?\b', mac_text, re.I)
     mem = re.search(r'(\d{1,3})\s*GB\b', mac_text, re.I)
@@ -76,12 +80,19 @@ def from_issue(issue):
     fps = re.search(r'\d+(?:\s*-\s*\d+)?', plain(f.get('Frame rate'), 40))
     row = [model, chip_name, mem[1], macos[0] if macos else '', build, fps[0].replace(' ', '') if fps else '', used[0] if used else '',
            plain(f.get('How it went'), 300) or plain(f.get('Frame rate'), 60), f'switch2mac#{n}', (issue.get('created_at') or '')[:10]]
+    if unlisted:   # the shared table of games with no page: the same columns, then the title ID and the game's name
+        return {'ok': True, 'game': g['name'], 'dir': 'games/unlisted', 'row': row + [g['title_id'], plain(g['name'], 80)]}
     return {'ok': True, 'game': g['name'], 'dir': str(g['dir'].relative_to(ROOT)), 'row': row}
+
+
+UNLISTED_HEAD = ["# How games with no page here ran on players' Macs (built with an untested build). Same columns as a game's reports.tsv, then the title ID and the game.",
+                 '# Columns: Mac, chip, memory (GB), macOS, build (with its commit when known), fps, peak memory (GB), notes, source, date, title ID, game']
 
 
 def apply(result):   # the row in its game's table; a row from the same issue is replaced
     t = ROOT / result['dir'] / 'reports.tsv'; src = result['row'][8]
-    lines = [l for l in t.read_text().splitlines() if l.split('\t')[8:9] != [src]] if t.exists() else []
+    lines = [l for l in t.read_text().splitlines() if l.split('\t')[8:9] != [src]] if t.exists() else UNLISTED_HEAD if result['dir'] == 'games/unlisted' else []
+    t.parent.mkdir(parents=True, exist_ok=True)
     t.write_text('\n'.join(lines + ['\t'.join(result['row'])]) + '\n')
 
 

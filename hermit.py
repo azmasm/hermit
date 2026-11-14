@@ -138,13 +138,15 @@ PROFILE = None   # an untested build on Hermit's engine: the profile guessed fro
 
 
 def engine_pins():   # each engine's pin that an untested build uses: the ones the updater keeps current (Mario Kart World's two)
-    pins = {}
+    # A build named after its kind is that project's own (nxnative's build is seedds/nxnative); a game's other builds of the kind are forks (mkw-neo,
+    # Thijs2004's 1.8.0 port, kid-with-sword, ...) and are used only for a kind no game has its own build of
+    pins, forks = {}, {}
     for g in GAMES.values():
-        for b in builds(g): pins.setdefault(b['engine']['kind'], b['engine'])
+        for b in builds(g): (pins if b['id'] == b['engine']['kind'] else forks).setdefault(b['engine']['kind'], b['engine'])
     for tid, kind in (('0400C3F00006E000', 'switch2mac'), ('0400C3F00006E000', 'nxnative')):
         for b in builds(GAMES.get(tid, {})):
-            if b['engine']['kind'] == kind: pins[kind] = b['engine']
-    return pins
+            if b['engine']['kind'] == kind and b['id'] == kind: pins[kind] = b['engine']
+    return {**forks, **pins}
 
 
 CUSTOM = None   # --custom URL[@branch or commit]: the player's own nxnative fork, offered as the untested build "custom" (custom_build)
