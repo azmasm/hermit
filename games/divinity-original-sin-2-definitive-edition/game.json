@@ -1,0 +1,27 @@
+{
+ "title_id": "010027400CDC6000",
+ "name": "Divinity: Original Sin 2 - Definitive Edition",
+ "version": "1.0.12",
+ "console": "switch",
+ "check": "daily",
+ "builds": [
+  {
+   "id": "nxnative",
+   "name": "nxnative",
+   "versions": [
+    "v786432"
+   ],
+   "version_names": {
+    "v786432": "1.0.12"
+   },
+   "engine": {
+    "kind": "nxnative",
+    "repo": "https://github.com/seedds/nxnative",
+    "commit": "72047f1aa94f42f6f8d359e4934787304d85d5cc"
+   },
+   "shader_list": "shader_list.tsv",
+   "about": "nxnative's profile (1.0.12) with Hermit's overlay and key-2 settings: see its notes for how far it plays."
+  }
+ ],
+ "disk_gb": 30
+}
