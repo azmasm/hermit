@@ -1,3 +1,3 @@
-# switch2mac shared shader list	game=01002DA013484000	engine=nxnative-7249ee9f95ed
-# The Legend of Zelda: Skyward Sword HD, built with nxnative at 7249ee9f95ed. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
+# switch2mac shared shader list	game=01002DA013484000	engine=nxnative-b65b9b0fc75a
+# The Legend of Zelda: Skyward Sword HD, built with nxnative at b65b9b0fc75a. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
