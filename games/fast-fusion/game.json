@@ -1,0 +1,11 @@
+{
+ "title_id": "040041E0212AE000",
+ "name": "Fast Fusion",
+ "version": "update v262144",
+ "engine": {
+  "kind": "nxnative",
+  "repo": "https://github.com/seedds/nxnative",
+  "commit": "b16693b3dcc2c92129f4d497637d4d4c9763384f"
+ },
+ "disk_gb": 50
+}
