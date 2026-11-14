@@ -1,3 +1,3 @@
-# switch2mac shared shader list	game=0100606026F12000	engine=nxnative-3c4de03c71e4
-# FINAL FANTASY RESONANCE, built with nxnative at 3c4de03c71e4. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
+# switch2mac shared shader list	game=0100606026F12000	engine=nxnative-0929dd69e198
+# FINAL FANTASY RESONANCE, built with nxnative at 0929dd69e198. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
