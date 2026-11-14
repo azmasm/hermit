@@ -1,5 +1,5 @@
-# switch2mac shared shader list	game=040074A01BF12000	engine=nxnative-a2514d7def4e
-# Donkey Kong Bananza, built with nxnative at a2514d7def4e. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
+# switch2mac shared shader list	game=040074A01BF12000	engine=nxnative-d33e5152710e
+# Donkey Kong Bananza, built with nxnative at d33e5152710e. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
 # Players add to it with the app's Send button (tools/shader_list.py collect). Keys belong to this engine version: a new engine commit may need the list recorded again.
 S	131d7dcc054f92b9_b	5
