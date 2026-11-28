@@ -1,12 +1,12 @@
 # Super Mario Bros. Wonder – Nintendo Switch 2 Edition + Meetup in Bellabel Park
 
-Title ID `040015100B514001`, base game. Added automatically when [nxnative](https://github.com/seedds/nxnative) added its profile: see [nxnative's notes on it](https://github.com/seedds/nxnative/tree/7071a5ef28d5a2aa9c28f545d7b3a2effc54dd0d/dm/games/040015100B514001) for how far it plays and on which Mac.
+Title ID `040015100B514001`, base game. Added automatically when [nxnative](https://github.com/seedds/nxnative) added its profile: see [nxnative's notes on it](https://github.com/seedds/nxnative/tree/39fdbff9693cd7c5ad513b845ba3a0ebeafa3581/dm/games/040015100B514001) for how far it plays and on which Mac.
 
 Built with nxnative's own builder at the commit `game.json` names (fetched once into `./engines`), with Hermit's front end added (`tools/engine/patch.py`): the game starts at once, **key 1** is the performance overlay and **key 2** the settings.
 
 | What | |
 |---|---|
-| Profile and notes | [nxnative `dm/games/040015100B514001`](https://github.com/seedds/nxnative/tree/7071a5ef28d5a2aa9c28f545d7b3a2effc54dd0d/dm/games/040015100B514001) |
+| Profile and notes | [nxnative `dm/games/040015100B514001`](https://github.com/seedds/nxnative/tree/39fdbff9693cd7c5ad513b845ba3a0ebeafa3581/dm/games/040015100B514001) |
 | Dump folder | `base/` (exefs and romfs) |
 
 ## Shared shader list
