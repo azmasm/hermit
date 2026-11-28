@@ -2,7 +2,7 @@
 
 Title ID `010099801C4FA001`. A **Switch** game: built from your own copy's `.xci` / `.nsp` files with your own `prod.keys` (see [LEGAL.md](../../LEGAL.md)). Versions: 1.3.0.
 
-Added automatically from [nxnative](https://github.com/seedds/nxnative)'s profile: see [its notes](https://github.com/seedds/nxnative/tree/85b222bb8ddcfac90e867b2f28d1bb053a9552cc/dm/games/010099801C4FA001) for how far it plays and on which Mac. Built with nxnative's builder at the commit `game.json` names, with Hermit's front end: the game starts at once, **key 1** is the performance overlay and **key 2** the settings.
+Added automatically from [nxnative](https://github.com/seedds/nxnative)'s profile: see [its notes](https://github.com/seedds/nxnative/tree/fa07c09f1624a7227e35603d79ce7cbcc1d5ab1e/dm/games/010099801C4FA001) for how far it plays and on which Mac. Built with nxnative's builder at the commit `game.json` names, with Hermit's front end: the game starts at once, **key 1** is the performance overlay and **key 2** the settings.
 
 ## Shared shader list
 
