@@ -1,5 +1,5 @@
-# switch2mac shared shader list	game=0400D4201C6EA000	engine=nxnative-5cbfbfea707d
-# Mario Tennis Fever, built with nxnative at 5cbfbfea707d. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
+# switch2mac shared shader list	game=0400D4201C6EA000	engine=nxnative-39fdbff9693c
+# Mario Tennis Fever, built with nxnative at 39fdbff9693c. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
 C	1731be5865a5f358_b
 C	fc4edc7c1281dc5a_b
