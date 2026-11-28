@@ -1,3 +1,3 @@
-# switch2mac shared shader list	game=0100646009FBE000	engine=nxnative-742c9fb83c37
-# Dead Cells, built with nxnative at 742c9fb83c37. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
+# switch2mac shared shader list	game=0100646009FBE000	engine=nxnative-fa07c09f1624
+# Dead Cells, built with nxnative at fa07c09f1624. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
