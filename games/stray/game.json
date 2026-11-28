@@ -1,0 +1,27 @@
+{
+ "title_id": "010075101EF84000",
+ "name": "Stray",
+ "version": "1.6.0",
+ "console": "switch",
+ "check": "daily",
+ "builds": [
+  {
+   "id": "nxnative",
+   "name": "nxnative",
+   "versions": [
+    "v131072"
+   ],
+   "version_names": {
+    "v131072": "1.6.0"
+   },
+   "engine": {
+    "kind": "nxnative",
+    "repo": "https://github.com/seedds/nxnative",
+    "commit": "94318b0105a7908a0c1bff6c792bac9b86efe9b0"
+   },
+   "shader_list": "shader_list.tsv",
+   "about": "nxnative's profile (1.6.0) with Hermit's overlay and key-2 settings: see its notes for how far it plays."
+  }
+ ],
+ "disk_gb": 30
+}
