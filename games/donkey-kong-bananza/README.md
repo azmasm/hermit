@@ -10,7 +10,7 @@ Built with [upstream nxnative](https://github.com/seedds/nxnative)'s own builder
 
 | What | |
 |---|---|
-| Profile and notes | [nxnative `dm/games/040074A01BF12000`](https://github.com/seedds/nxnative/tree/6ccaca8e271100b0e7ad975353d98d806a98f7ea/dm/games/040074A01BF12000) |
+| Profile and notes | [nxnative `dm/games/040074A01BF12000`](https://github.com/seedds/nxnative/tree/5c841a8563fdbef460b6f54d4f5ad658f5c4ae5c/dm/games/040074A01BF12000) |
 | Dump folder | `base/` (exefs, romfs), `updates/458752/` (exefs, romfs: the full patched RomFS), optionally `dlc/` |
 | Build time | all 22,852 shaders: about 75 minutes on an M4 Pro (nxnative's figure), longer on older Macs |
 | Verified by nxnative | on an M4 Pro: three play sessions of about 5 minutes and longer automated runs, through the opening, the mining tunnel and the areas after it, at 60 fps; in busy scenes the game drops itself to 30 fps for a few seconds. Nothing past the first level's opening areas is tested. The first start builds its pipelines for about 4 minutes, once |
