@@ -1,5 +1,5 @@
-# switch2mac shared shader list	game=010015100B514000	engine=nxnative-3a177d45e498
-# Super Mario Bros. Wonder, built with nxnative at 3a177d45e498. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
+# switch2mac shared shader list	game=010015100B514000	engine=nxnative-d379ceda33b2
+# Super Mario Bros. Wonder, built with nxnative at d379ceda33b2. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
 S	68ea18a1b9bbe5f3_b	1
 S	ae7dd7c1c60196f1_b	1
