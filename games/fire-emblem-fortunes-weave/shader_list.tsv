@@ -1,5 +1,5 @@
-# switch2mac shared shader list	game=04007EF01F8AE000	engine=nxnative-5cbfbfea707d
-# Fire Emblem Fortune's Weave, built with nxnative at 5cbfbfea707d. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
+# switch2mac shared shader list	game=04007EF01F8AE000	engine=nxnative-e68ccb49af99
+# Fire Emblem Fortune's Weave, built with nxnative at e68ccb49af99. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time; shipped in the app as pso_manifest.tsv.
 # Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.
 C	c683452aca957fc6_b
 C	8f207704e19fce85_b
