@@ -1,0 +1,3 @@
+# switch2mac shared shader list	game=0100A250097F0000	engine=nxnative-a9fef45533ac
+# DRAGON BALL FighterZ, built with nxnative at a9fef45533ac. Added to nxnative's own seed list (its profile's pso_manifest.tsv) at build time.
+# Rows: S<TAB>shader key<TAB>stage / C<TAB>compute shader key / R<TAB>render pipeline key (hex): identifiers and render state only, no game data. Row order = first-use order; do not sort.

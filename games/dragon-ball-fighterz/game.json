@@ -1,0 +1,27 @@
+{
+ "title_id": "0100A250097F0000",
+ "name": "DRAGON BALL FighterZ",
+ "version": "01.50",
+ "console": "switch",
+ "check": "daily",
+ "builds": [
+  {
+   "id": "nxnative",
+   "name": "nxnative",
+   "versions": [
+    "v1703936"
+   ],
+   "version_names": {
+    "v1703936": "01.50"
+   },
+   "engine": {
+    "kind": "nxnative",
+    "repo": "https://github.com/seedds/nxnative",
+    "commit": "a9fef45533ac4a0417e446be2ecd8b8fd07b0957"
+   },
+   "shader_list": "shader_list.tsv",
+   "about": "nxnative's profile (01.50) with Hermit's overlay and key-2 settings: see its notes for how far it plays."
+  }
+ ],
+ "disk_gb": 30
+}
