@@ -1,0 +1,27 @@
+{
+ "title_id": "0100D2C024D06000",
+ "name": "Love Is All Around 2",
+ "version": "1.16.0.223",
+ "console": "switch",
+ "check": "daily",
+ "builds": [
+  {
+   "id": "nxnative",
+   "name": "nxnative",
+   "versions": [
+    "v131072"
+   ],
+   "version_names": {
+    "v131072": "1.16.0.223"
+   },
+   "engine": {
+    "kind": "nxnative",
+    "repo": "https://github.com/seedds/nxnative",
+    "commit": "7669f465ffce885f53b355a5d8bae7ad7e7fbfd5"
+   },
+   "shader_list": "shader_list.tsv",
+   "about": "nxnative's profile (1.16.0.223) with Hermit's overlay and key-2 settings: see its notes for how far it plays."
+  }
+ ],
+ "disk_gb": 30
+}
