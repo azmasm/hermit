@@ -10,7 +10,7 @@ Built with [upstream nxnative](https://github.com/seedds/nxnative)'s own builder
 
 | What | |
 |---|---|
-| Profile and notes | [nxnative `dm/games/04003F40232DE000`](https://github.com/seedds/nxnative/tree/fa07c09f1624a7227e35603d79ce7cbcc1d5ab1e/dm/games/04003F40232DE000) |
+| Profile and notes | [nxnative `dm/games/04003F40232DE000`](https://github.com/seedds/nxnative/tree/39fdbff9693cd7c5ad513b845ba3a0ebeafa3581/dm/games/04003F40232DE000) |
 | Dump folder | `base/` and `updates/196608/` (the update RomFS is whole: 46 GB). nxnative tested a NUP of the same files; Hermit builds from a dump folder |
 | Shaders | about 102,000: a full build can take many hours |
 | Verified by nxnative | on an M6 Mac with 16 GB: the first-run settings, the opening movies and cutscenes, the first field; frame p50 16.6 ms, p95 about 18 ms, p99 100-114 ms (Metal's submission queue, open) |
